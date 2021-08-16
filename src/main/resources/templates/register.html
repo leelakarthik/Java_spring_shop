@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <form
+        class="cust__login"
+        th:action="@{/saveDetails}"
+        th:object="${customer}"
+        method="POST"
+      >
+        <h2>Customer Register</h2>
+        <div class="form_input">
+          <label for="uname"> Name : </label>
+          <input type="text" th:field="*{username}" />
+          <label for="fname"> Father Name : </label>
+          <input type="text" th:field="*{father_name}" />
+          <label for="text"> Email : </label>
+          <input type="email" th:field="*{email}" />
+          <label for="dob"> Date of Birth : </label>
+          <input type="date" th:field="*{date_of_birth}" />
+          <label for="upass"> Password : </label>
+          <input type="text" th:field="*{password}" />
+        </div>
+        <div>
+          <input type="submit" />
+        </div>
+        <p><a th:href="@{/}">Login</a></p>
+      </form>
+    </div>
+  </body>
+</html>

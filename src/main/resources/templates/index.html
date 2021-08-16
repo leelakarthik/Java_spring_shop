@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <form
+        action="#"
+        class="cust__login"
+        th:action="@{/login}"
+        th:object="${user}"
+        method="POST"
+      >
+        <h1 th:text="${check}"></h1>
+        <h2>Customer Login</h2>
+        <div class="form_input">
+          <label for="uname"> Email : </label>
+          <input type="email" th:field="*{username}" />
+          <label for="upass"> Password : </label>
+          <input type="text" th:field="*{password}" />
+        </div>
+        <div>
+          <input type="submit" />
+        </div>
+        <!-- href="@{/register} -->
+        <p><a th:href="@{/register}">Register</a></p>
+      </form>
+      <!-- <form class="emp__login">
+        <h2>Employee Login</h2>
+        <div class="form_input">
+          <label for="uname"> Email : </label>
+          <input type="text" id="uname" />
+          <label for="upass"> Password : </label>
+          <input type="text" id="upass" />
+        </div>
+        <div>
+          <input type="submit" />
+        </div>
+      </form> -->
+    </div>
+  </body>
+</html>

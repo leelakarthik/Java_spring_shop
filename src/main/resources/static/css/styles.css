@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+.main {
+  width: 600px;
+  height: 600px;
+  clear: both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main input {
+  width: 100%;
+  clear: both;
+}
+h2,
+p {
+  text-align: center;
+}
+.cust__login {
+  background-color: rgb(182, 207, 205);
+  border: 1px solid black;
+}
+/* .cust__login p {
+  text-align: center;
+} */
+.emp__login {
+  background-color: rgb(182, 207, 205);
+  border: 1px solid black;
+}
+.form_input {
+  padding: 20px;
+}
